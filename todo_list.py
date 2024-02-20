@@ -59,6 +59,6 @@ while action != 'q':
     v to view all tasks
     m to mark a task as completed
     d to delete a task
-    q to quit
     s to sort tasks in alphabetical order
+    q to quit
     >>> """)
