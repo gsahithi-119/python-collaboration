@@ -31,4 +31,9 @@ while action != 'q':
         tasklist.append(new) # add task to task list
         print_tasks(tasklist) # print updated task list
         
-    
+    if action == 'd': # if action is to delete task
+        # get the number of the task that user wants to delete    
+        num = int(input("Which task would you like to delete? Enter the number >>> "))
+        # delete that task, index is 1 less than the number user entered as index starts at 0
+        tasklist.remove(tasklist[num-1]) 
+        print_tasks(tasklist) # print updated task list
