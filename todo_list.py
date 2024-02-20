@@ -37,3 +37,10 @@ while action != 'q':
         # delete that task, index is 1 less than the number user entered as index starts at 0
         tasklist.remove(tasklist[num-1]) 
         print_tasks(tasklist) # print updated task list
+    
+    if action == 'm': # if action is to mark task as completed
+        # get the number of the task that user wants to mark     
+        num = int(input("Which task would you like to mark as completed? Enter the number >>> "))
+        completed = tasklist[num-1] + " ✓" # new variable that adds a checkmark to the task in list
+        tasklist[num-1] = completed # update that task number to include checkmark
+        print_tasks(tasklist) # print new list
