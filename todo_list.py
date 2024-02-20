@@ -44,3 +44,15 @@ while action != 'q':
         completed = tasklist[num-1] + " ✓" # new variable that adds a checkmark to the task in list
         tasklist[num-1] = completed # update that task number to include checkmark
         print_tasks(tasklist) # print new list
+        
+    if action == 'q': # if action is to quit
+        break # leave for loop
+    
+    # get next action from user
+    action = input("""What would you like to do? Press 
+    a to add a tasks to the list
+    v to view all tasks
+    m to mark a task as completed
+    d to delete a task
+    q to quit
+    >>> """)
