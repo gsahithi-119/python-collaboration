@@ -16,6 +16,19 @@ action = input("""What would you like to do? Press
 # create function that numbers and prints all tasks in task list
 def print_tasks(tasklist):
     num = 1
-    for item in tasklist:
-        print(str(num) + ".", tasklist[num-1])
+    for item in tasklist: # for each item
+        print(str(num) + ".", tasklist[num-1]) # print numbering and item
         num += 1
+
+# while user does not quit
+while action != 'q':
+    if action == 'v': # if action is view tasks
+        print_tasks(tasklist) # print task list
+   
+    if action == 'a': # if action is to add tasks
+        new = input("""What is the task you would like to add?
+    >>> """) # get new task from user
+        tasklist.append(new) # add task to task list
+        print_tasks(tasklist) # print updated task list
+        
+    
